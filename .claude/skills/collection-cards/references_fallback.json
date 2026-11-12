@@ -1,0 +1,23 @@
+{
+  "_comment": "Fallback style references: our own approved cards (used when the original game cards from references_local.json are not in the repo). Paths relative to the project root.",
+  "1": [
+    ".claude/skills/collection-cards/fallback_refs/cat1_stetson.png",
+    ".claude/skills/collection-cards/fallback_refs/cat1_planet.png",
+    ".claude/skills/collection-cards/fallback_refs/cat1_witch_hat.png"
+  ],
+  "2": [
+    ".claude/skills/collection-cards/fallback_refs/cat2_saddle.png",
+    ".claude/skills/collection-cards/fallback_refs/cat2_spacesuit.png",
+    ".claude/skills/collection-cards/fallback_refs/cat2_coffin.png"
+  ],
+  "3": [
+    ".claude/skills/collection-cards/fallback_refs/cat3_hay_bale.png",
+    ".claude/skills/collection-cards/fallback_refs/cat3_swing_doors.png",
+    ".claude/skills/collection-cards/fallback_refs/cat3_jack_o_lantern.png"
+  ],
+  "4": [
+    ".claude/skills/collection-cards/fallback_refs/cat4_iron_horse.png",
+    ".claude/skills/collection-cards/fallback_refs/cat4_liftoff.png",
+    ".claude/skills/collection-cards/fallback_refs/cat4_haunted_house.png"
+  ]
+}

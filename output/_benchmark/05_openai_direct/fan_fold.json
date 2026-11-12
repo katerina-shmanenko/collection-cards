@@ -1,0 +1,27 @@
+{
+  "saved": [
+    "output/_benchmark/05_openai_direct/fan_fold_gen.png"
+  ],
+  "model": "gpt-image-2.6-sunburst",
+  "size": "1104x1008",
+  "quality": "medium",
+  "refs": [
+    "grad_cap.png",
+    "calculator.png",
+    "ice_pop.png"
+  ],
+  "usage": {
+    "input_tokens": 2908,
+    "input_tokens_details": {
+      "image_tokens": 2430,
+      "text_tokens": 478
+    },
+    "output_tokens": 1357,
+    "output_tokens_details": {
+      "image_tokens": 1357,
+      "text_tokens": 0
+    },
+    "total_tokens": 4265
+  },
+  "seconds": 25.2
+}

@@ -1,0 +1,10 @@
+{
+  "_comment": "Style references already uploaded to Magnific (project 'Playrix Cards'). Pass as images_generate references [{type: 'style', identifier}] — 3 refs of the same category as the card being generated. Source files: references/cards_hq/.",
+  "magnific_project": "Playrix Cards",
+  "by_category": {
+    "1": { "grad_cap": "rgDVpE2xtc", "calculator": "s7XeBHKl8e", "ice_pop": "P3fvCsZ42C" },
+    "2": { "mojito": "UPIotkXwny", "tea_cup": "huiN3pDvqL", "beach_bag": "KLTcVCJkqp" },
+    "3": { "ice_cube_tray": "lJBdo5hgv9", "fruit_plate": "5j0WTC1Kxe", "bumper_car": "gOoX8k2SXO" },
+    "4": { "lighthouse": "tCN46pNmZJ", "sand_castle": "5j0WTErKxe", "lifeguard_chair": "3zHQqyEREY" }
+  }
+}

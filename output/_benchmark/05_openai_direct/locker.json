@@ -1,0 +1,27 @@
+{
+  "saved": [
+    "output/_benchmark/05_openai_direct/locker_gen.png"
+  ],
+  "model": "gpt-image-2.6-sunburst",
+  "size": "1104x1008",
+  "quality": "medium",
+  "refs": [
+    "ice_cube_tray.png",
+    "fruit_plate.png",
+    "bumper_car.png"
+  ],
+  "usage": {
+    "input_tokens": 2969,
+    "input_tokens_details": {
+      "image_tokens": 2430,
+      "text_tokens": 539
+    },
+    "output_tokens": 1357,
+    "output_tokens_details": {
+      "image_tokens": 1357,
+      "text_tokens": 0
+    },
+    "total_tokens": 4326
+  },
+  "seconds": 29.9
+}

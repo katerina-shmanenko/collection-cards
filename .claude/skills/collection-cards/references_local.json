@@ -1,0 +1,7 @@
+{
+  "_comment": "Style references per category for the direct OpenAI generator (paths relative to the project root). Same cards as references_magnific.json, but local files work on any machine.",
+  "1": ["references/cards_hq/cat1_air/grad_cap.png", "references/cards_hq/cat1_air/calculator.png", "references/cards_hq/cat1_air/ice_pop.png"],
+  "2": ["references/cards_hq/cat2_simple_surface/mojito.png", "references/cards_hq/cat2_simple_surface/tea_cup.png", "references/cards_hq/cat2_simple_surface/beach_bag.png"],
+  "3": ["references/cards_hq/cat3_real_surface/ice_cube_tray.png", "references/cards_hq/cat3_real_surface/fruit_plate.png", "references/cards_hq/cat3_real_surface/bumper_car.png"],
+  "4": ["references/cards_hq/cat4_environment/lighthouse.png", "references/cards_hq/cat4_environment/sand_castle.png", "references/cards_hq/cat4_environment/lifeguard_chair.png"]
+}

@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Set plan",
+  "description": "План одного варианта набора: 10 карточек. Проверяется перед генерацией.",
+  "type": "object",
+  "required": [
+    "collection",
+    "set_name",
+    "concept",
+    "cards"
+  ],
+  "properties": {
+    "collection": {
+      "type": "string",
+      "description": "Коллекция, напр. 'Movies'"
+    },
+    "set_name": {
+      "type": "string",
+      "description": "Название набора, 1–2 слова (EN), можно игра слов"
+    },
+    "variant": {
+      "type": "string",
+      "description": "Метка варианта: A, B, C..."
+    },
+    "concept": {
+      "type": "string",
+      "description": "Идея набора в 1–2 предложениях (язык — как у продюсера)"
+    },
+    "style_mood": {
+      "type": "string",
+      "description": "EN, одна фраза: настроение и дизайн объектов под жанр; вставляется в каждый промпт после блока A"
+    },
+    "palette_note": {
+      "type": "string",
+      "description": "Жанровый акцент палитры фонов и объектов (для планирования цветов)"
+    },
+    "cards": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "slot",
+          "object",
+          "label",
+          "rarity",
+          "category",
+          "background_color",
+          "scene"
+        ],
+        "properties": {
+          "slot": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "object": {
+            "type": "string",
+            "description": "Что изображено (EN), существительное без цвета: 'cowboy hat', 'flying saucer'"
+          },
+          "label": {
+            "type": "string",
+            "description": "Подпись на карточке, 1–2 слова (EN), лучше роль/действие"
+          },
+          "rarity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "category": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "background_color": {
+            "type": "string",
+            "description": "Основной цвет фона, мягкая формулировка по art_style F: 'soft sky blue', 'muted violet', 'warm amber yellow' (не 'saturated …'). Для кат. 4 — цвет доминирующего фона сцены"
+          },
+          "background_pattern": {
+            "type": "string",
+            "description": "Только кат. 1: soft radial sunburst rays / concentric circles / soft swirl / vertical stripes / soft diagonal waves / faint repeating pattern of small <motif> icons"
+          },
+          "scene": {
+            "type": "string",
+            "description": "Короткое описание кадра (EN). В промпт идёт для кат. 4 (окружение); для кат. 1–3 — пояснение для человека"
+          },
+          "story_detail": {
+            "type": "string",
+            "description": "Одна оживляющая деталь (EN) или пусто"
+          },
+          "key_features": {
+            "type": "string",
+            "description": "1–3 опознавательных признака объекта и сюжетной детали (EN), без которых они не узнаются; не менять ради контраста"
+          },
+          "detail_color": {
+            "type": "string",
+            "description": "Цвет сюжетной детали (EN), контрастный основному цвету объекта"
+          },
+          "object_color": {
+            "type": "string",
+            "description": "Основной цвет объекта: КОРОТКОЕ прилагательное, 1–4 слова ('bright red', 'golden'), подставляется как 'a {object_color} {object}'; сложные цвета и детали — в key_features"
+          },
+          "shape": {
+            "type": "string",
+            "enum": [
+              "flat",
+              "container",
+              "standing",
+              "structure"
+            ],
+            "description": "Определяет ракурс по таблице D в art_style.md"
+          },
+          "camera": {
+            "type": "string",
+            "description": "Необязательно: ручной ракурс (EN), перекрывает ракурс по shape из таблицы art_style D (нужно, когда shape не подходит: крупный сундук-сцена, остров немного сверху)"
+          },
+          "pose": {
+            "type": "string",
+            "description": "Что ближе к камере и как расположено (EN): главная часть впереди; для flat — направление диагонали"
+          },
+          "object_type": {
+            "type": "string",
+            "enum": [
+              "food",
+              "tool",
+              "furniture",
+              "clothing",
+              "tech",
+              "vehicle",
+              "building",
+              "nature",
+              "creature",
+              "paper"
+            ]
+          },
+          "scale": {
+            "type": "string",
+            "enum": [
+              "small",
+              "medium",
+              "large"
+            ]
+          },
+          "sky": {
+            "type": "string",
+            "description": "Необязательно, кат. 4 (EN): заменяет фразу шаблона о голубом небе с облаками — например 'Warm pink-orange Martian sky, no clouds' или 'Clear saturated blue sky, no clouds' (облака путаются с дымом)"
+          },
+          "framing": {
+            "type": "string",
+            "description": "Необязательно (EN): заменяет фразу шаблона о размере объекта в кадре ('filling about 80% of the frame…') — например 'the whole rover is visible with clear space around it, about 60% of the frame width'"
+          },
+          "fit": {
+            "type": "object",
+            "description": "Необязательно: подгонка в рамку для этой карточки (fit_crop.py). margins — 'top,bottom,side' доли карточки (например '0.18,0.06,0.08' — объект меньше, больше воздуха под звёздами); center — 'mass' для несимметричных объектов (дым у ракеты, рука)",
+            "properties": {
+              "margins": {"type": "string", "pattern": "^-?[0-9.]+,-?[0-9.]+,-?[0-9.]+$"},
+              "center": {"type": "string", "enum": ["bbox", "mass"]},
+              "paste": {"type": "string", "enum": ["full", "object"], "description": "достройка фона: object — на ровном небе/фоне без шва, full — для сложных сцен"}
+            },
+            "additionalProperties": false
+          },
+          "floor_color": {
+            "type": "string",
+            "description": "Кат. 2: цвет простого пола (по умолчанию = background_color)"
+          },
+          "wall_variant": {
+            "type": "string",
+            "description": "Кат. 2: '' / ' with soft vertical stripes' / ' with a soft spotlight glow'"
+          },
+          "surface": {
+            "type": "string",
+            "description": "Кат. 3: реалистичная поверхность (wooden planks / sand / stone pavement …). Не задать — подставится 'wooden planks'"
+          },
+          "backdrop": {
+            "type": "string",
+            "description": "Кат. 3: задник (wall / curtain / sky …)"
+          }
+        }
+      }
+    }
+  },
+  "x-set-checks": [
+    "все 4 категории, ориентир 2–3 каждой",
+    "редкость по слотам 1,1,2,2,3,3,4,4,5,5; слоты 9–10 — коронные объекты",
+    "≥4 разных object_type; все 3 масштаба, минимум 2 каждого",
+    "сюжетная деталь у 4–6 карточек",
+    "≥6 цветов фона; соседи по сетке 5×2 не совпадают и не близки; пары объект–фон по art_style F",
+    "нет повторов объектов с утверждёнными наборами коллекции (output/<коллекция>/COLLECTION.md) и точных повторов с Summer",
+    "нет брендов, чужих IP, оружия, крови, черепов",
+    "набор — мир своей темы; реквизит съёмок не смешивать с жанром (set_principles 2a)"
+  ]
+}

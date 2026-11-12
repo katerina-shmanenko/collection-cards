@@ -1,0 +1,23 @@
+# system / secrets
+.DS_Store
+__pycache__/
+.env*
+!.env.example
+
+# Playrix materials (test-task brief, game cards, set windows) — not for a public repo.
+# The skill falls back to our own approved cards (.claude/skills/collection-cards/fallback_refs/).
+references/
+docs/comparison/*game_vs_ours.png
+output/_benchmark/**/*original*
+
+# working files, drafts and duplicates (history is described in docs/WORKLOG.md)
+output/**/_work/
+output/**/_miro/
+output/movies/_miro_comparison/
+output/movies/western_v2/
+output/**/_draft*/
+output/**/_before/
+output/**/tmp_swap*
+
+# Miro assets (include Playrix references for side-by-side comparison)
+miro_kit/

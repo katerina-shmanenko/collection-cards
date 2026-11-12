@@ -1,0 +1,27 @@
+{
+  "saved": [
+    "output/_benchmark/05_openai_direct/coaster_gen.png"
+  ],
+  "model": "gpt-image-2.6-sunburst",
+  "size": "1104x1008",
+  "quality": "medium",
+  "refs": [
+    "lighthouse.png",
+    "sand_castle.png",
+    "lifeguard_chair.png"
+  ],
+  "usage": {
+    "input_tokens": 3003,
+    "input_tokens_details": {
+      "image_tokens": 2430,
+      "text_tokens": 573
+    },
+    "output_tokens": 1357,
+    "output_tokens_details": {
+      "image_tokens": 1357,
+      "text_tokens": 0
+    },
+    "total_tokens": 4360
+  },
+  "seconds": 35.7
+}

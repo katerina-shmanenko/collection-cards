@@ -1,0 +1,4 @@
+# Python 3.9+. Install: python3 -m pip install --user -r requirements.txt
+pillow>=10
+numpy>=1.24
+rembg[cpu]>=2.0.60   # local background removal; first run downloads the isnet model (~180 MB)
